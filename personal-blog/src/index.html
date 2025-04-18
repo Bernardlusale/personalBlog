@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Blog Post Styling */
+        .blog-post {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 1rem;
+        }
+
+        .blog-post img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-post h3 {
+            margin: 0;
+            color: #FFD700;
+        }
+
+        .blog-post p {
+            margin: 0.5rem 0;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hide Blog Post Thumbnails */
+        .blog-post img {
+            display: none;
+        }
+
+        /* Hide Portfolio Project Thumbnails */
+        .portfolio-item img {
+            display: none;
+        }
+
+        /* About Me Section */
+        #about {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        #about h2 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .about-container img.profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-content p {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Toggle Button Styling */
+        .toggle-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li> 
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section id="welcome" class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome to My Personal Blog</h1>
+                <p>Hi, I'm <strong>Bernard Lusale</strong>. This is where I share my journey as a <strong>Software Engineer</strong>, <strong>Cybersecurity Analyst</strong>, and <strong>Tech Enthusiast</strong>. Explore my projects, read my thoughts on technology, and feel free to connect with me!</p>
+                <a href="#about" class="welcome-button">Learn More About Me</a>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Blog Posts</h2>
+            <div class="blog-container">
+                <div class="blog-post">
+                    <img src="assets/blog-thumbnails/digital-vision.jpg" alt="Digital and Vision Thumbnail">
+                    <div class="blog-content">
+                        <h3><i class="fas fa-laptop"></i> Digital and Vision</h3> <!-- Laptop Icon -->
+                        <p class="tags">Tags: Tech, Programming</p>
+                        <p>This is a short summary of the blog post. Click below to read more...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="assets/blog-thumbnails/cybersecurity.jpg" alt="Cybersecurity Thumbnail">
+                    <div class="blog-content">
+                        <h3><i class="fas fa-lock"></i> Cybersecurity</h3> <!-- Lock Icon -->
+                        <p class="tags">Tags: Cybersecurity, AI</p>
+                        <p>This is a short summary of the blog post. Click below to read more...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <img src="assets/portfolio/project1.jpg" alt="Project 1 Thumbnail">
+                    <h3><i class="fas fa-project-diagram"></i> Project 1</h3> <!-- Project Icon -->
+                    <p>Description of project 1. This project focuses on...</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/portfolio/project2.jpg" alt="Project 2 Thumbnail">
+                    <h3><i class="fas fa-project-diagram"></i> Project 2</h3> <!-- Project Icon -->
+                    <p>Description of project 2. This project focuses on...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About and Contact Section -->
+        <div class="about-contact-container">
+            <!-- About Me Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <button id="toggle-about" class="toggle-button">Show About Me</button>
+                <div class="about-container" style="display: none;">
+                    <img src="assets/pk.jpg" alt="Profile Picture" class="profile-picture">
+                    <div class="about-content">
+                        <p>Hello! I'm <strong>Bernard Lusale</strong>, a computer science student, a passionate <strong>Software Engineer</strong>, <strong>Cybersecurity Analyst</strong>, and <strong>Tech Founder</strong>. I specialize in building innovative solutions like <em>IQ Insight</em> and <em>Water Quality Monitor</em>. My mission is to create impactful technology that solves real-world problems and empowers communities.</p>
+                        <p>I'm willing to learn more from different sources by delivering high-quality solutions that make a difference. Let's connect and collaborate to bring ideas to life!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <button id="toggle-contact" class="toggle-button">Show Contact Me</button>
+                <div class="contact-container" style="display: none;">
+                    <p>If you'd like to get in touch, please fill out the form below:</p>
+                    <form>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea><br><br>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- CV Section -->
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p>Download my CV <a href="#">here</a>.</p>
+        </section>
+    </main>
+
+   <footer>
+    <p>&copy; 2025 My Personal Blog. All rights reserved.</p>
+    <p>
+        <a href="mailto:bernardlusale20@gmail.com">Email</a> |
+        <a href="https://www.linkedin.com/in/bernard-lusale-631b9b31a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/your-github-Bernardlusale" target="_blank">GitHub</a>
+    </p>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
