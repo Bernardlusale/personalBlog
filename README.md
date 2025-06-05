@@ -1,2 +1,2 @@
-# personalBlog
+# my_portfolio
 My personal blog 
