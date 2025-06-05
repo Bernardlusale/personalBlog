@@ -1,2 +1,2 @@
 # my_portfolio
-My personal blog 
+portfolio
